@@ -1,0 +1,43 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-800 bg-gray-100; /* Slightly darker bg */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+     @apply font-semibold text-gray-900; /* Darker headings */
+  }
+
+  /* Add smooth transitions to common elements */
+  button, a, input, select, textarea {
+     @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Style for details/summary marker */
+   details > summary {
+      list-style: none; /* Remove default marker */
+   }
+   details > summary::-webkit-details-marker {
+      display: none; /* Remove default marker for Chrome/Safari */
+   }
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
